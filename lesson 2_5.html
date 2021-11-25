@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        'use strict';
+        function Additions(a, b) {
+            return a + b;
+        }
+        function Subtraction(a, b) {
+            return a - b;
+        }
+        function Division(a, b) {
+            return a / b;
+        }
+
+        function Multiplication(a, b) {
+            return a * b;
+        }
+
+
+        function mathOperation(arg1, arg2, operation) {
+            switch (operation) {
+                case "+":
+                    return Additions(arg1, arg2);
+                    break;
+                case "-":
+                    return Subtraction(arg1, arg2);
+                    break;
+                case "*":
+                    return Multiplication(arg1, arg2);
+                    break;
+                case "/":
+                    return Division(arg1, arg2);
+                    break;
+            }
+        }
+        console.log(mathOperation(1, 3, "+"))
+        console.log(mathOperation(1, 3, "-"))
+        console.log(mathOperation(3, 3, "*"))
+        console.log(mathOperation(24, 3, "/"))
+
+
+    </script>
+</body>
+
+</html>
