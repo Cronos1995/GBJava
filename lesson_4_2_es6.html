@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        'Use strict'
+        class Post {
+            constructor(author, text, date) {
+                this.author = author;
+                this.text = text;
+                this.date = date;
+            }
+            edit(someText) {
+                this.text = someText;
+            }
+        }
+        let postNumber1 = new Post("Incognito", "Some text in this section ", new Date());
+        console.log(postNumber1);
+        postNumber1.edit("section in this text");
+        console.log(postNumber1);
+
+        class AttachedPost extends Post {
+            constructor(author, text, date) {
+                super(author, text, date);
+                this.highlighted = false;
+            }
+            makeTextHighlighted() {
+                this.highlighted = true;
+            }
+        }
+        let atttanchedPost1 = new AttachedPost('Pro_User', 'section pro user', new Date());
+        console.log(atttanchedPost1);
+        atttanchedPost1.makeTextHighlighted();
+        atttanchedPost1.edit("text text text")
+        console.log(atttanchedPost1);
+    </script>
+</body>
+
+</html>
